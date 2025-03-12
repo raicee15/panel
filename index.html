@@ -1,0 +1,136 @@
+<pre>
+
+    (NORTH, SOUTH, CENTER, EAST, WEST)
+    setBounds(x, y, width, height)
+
+    import javax.swing.*;
+import java.awt.*;
+
+public class Raindale {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Prelim Activity_MARQUEZ");
+        frame.setSize(600, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
+        panel.setBounds(0, 0, 600, 400);
+        frame.add(panel);
+
+        JLabel registrationFormLabel = new JLabel("Registration Form");
+        registrationFormLabel.setFont(new Font("Serif", Font.BOLD, 20));
+        registrationFormLabel.setBounds(220, 10, 200, 30);
+        panel.add(registrationFormLabel);
+
+        JLabel lastNameLabel = new JLabel("Lastname");
+        lastNameLabel.setBounds(50, 50, 100, 25);
+        JTextField lastNameTextField = new JTextField();
+        lastNameTextField.setBounds(120, 50, 120, 25);
+        JLabel firstNameLabel = new JLabel("Firstname");
+        firstNameLabel.setBounds(260, 50, 100, 25);
+        JTextField firstNameTextField = new JTextField();
+        firstNameTextField.setBounds(330, 50, 120, 25);
+        JLabel middleInitialLabel = new JLabel("MI");
+        middleInitialLabel.setBounds(470, 50, 30, 25);
+        JTextField middleInitialTextField = new JTextField();
+        middleInitialTextField.setBounds(500, 50, 50, 25);
+
+        panel.add(lastNameLabel);
+        panel.add(lastNameTextField);
+        panel.add(firstNameLabel);
+        panel.add(firstNameTextField);
+        panel.add(middleInitialLabel);
+        panel.add(middleInitialTextField);
+
+        JLabel genderLabel = new JLabel("Gender");
+        genderLabel.setBounds(50, 100, 100, 25);
+        JRadioButton maleRadioButton = new JRadioButton("Male");
+        maleRadioButton.setBounds(120, 100, 70, 25);
+        JRadioButton femaleRadioButton = new JRadioButton("Female");
+        femaleRadioButton.setBounds(200, 100, 80, 25);
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(maleRadioButton);
+        genderGroup.add(femaleRadioButton);
+
+        JLabel ageLabel = new JLabel("Age");
+        ageLabel.setBounds(320, 100, 50, 25);
+        JTextField ageTextField = new JTextField();
+        ageTextField.setBounds(360, 100, 50, 25);
+
+        panel.add(genderLabel);
+        panel.add(maleRadioButton);
+        panel.add(femaleRadioButton);
+        panel.add(ageLabel);
+        panel.add(ageTextField);
+
+        JLabel commentsLabel = new JLabel("Comments");
+        commentsLabel.setBounds(50, 150, 100, 25);
+        JTextArea commentsTextArea = new JTextArea();
+        commentsTextArea.setBounds(120, 150, 250, 60);
+
+        panel.add(commentsLabel);
+        panel.add(commentsTextArea);
+
+        JLabel campusLabel = new JLabel("Campus");
+        campusLabel.setBounds(400, 150, 100, 25);
+        String[] campuses = {"Antipolo", "Manila", "Cebu", "Davao"};
+        JComboBox<String> campusComboBox = new JComboBox<>(campuses);
+        campusComboBox.setBounds(450, 150, 100, 25);
+
+        panel.add(campusLabel);
+        panel.add(campusComboBox);
+
+        JButton submitButton = new JButton("Submit");
+        submitButton.setBounds(180, 250, 100, 30);
+        JButton cancelButton = new JButton("Cancel");
+        cancelButton.setBounds(320, 250, 100, 30);
+
+        panel.add(submitButton);
+        panel.add(cancelButton);
+
+        frame.setVisible(true);
+    }
+}
+
+// this is multiple panel 
+import javax.swing.*;
+import java.awt.*;
+
+public class GridLayoutExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Grid Layout Example");
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new GridLayout(2, 2)); // 2 rows, 2 columns
+
+        JPanel panel1 = new JPanel();
+        panel1.setBackground(Color.RED);
+        panel1.add(new JLabel("Panel 1"));
+
+        JPanel panel2 = new JPanel();
+        panel2.setBackground(Color.GREEN);
+        panel2.add(new JLabel("Panel 2"));
+
+        JPanel panel3 = new JPanel();
+        panel3.setBackground(Color.BLUE);
+        panel3.add(new JLabel("Panel 3"));
+
+        JPanel panel4 = new JPanel();
+        panel4.setBackground(Color.YELLOW);
+        panel4.add(new JLabel("Panel 4"));
+
+        mainPanel.add(panel1);
+        mainPanel.add(panel2);
+        mainPanel.add(panel3);
+        mainPanel.add(panel4);
+
+        frame.add(mainPanel);
+        frame.setVisible(true);
+    }
+}
+
+
+</pre>
